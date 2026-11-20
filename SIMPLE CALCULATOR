@@ -1,0 +1,36 @@
+import datetime
+import math
+import statistics
+
+print(" SIMPLE CALCULATOR ")
+print("Date:", datetime.date.today())
+
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+
+print("1. Addition")
+print("2. Subtraction")
+print("3. Multiplication")
+print("4. Division")
+print("5. Square Root")
+print("6. Mean")
+
+choice = input("Choose an operation: ")
+
+if choice == "1":
+    print("Result:", num1 + num2)
+elif choice == "2":
+    print("Result:", num1 - num2)
+elif choice == "3":
+    print("Result:", num1 * num2)
+elif choice == "4":
+    if num2 != 0:
+        print("Result:", num1 / num2)
+    else:
+        print("Cannot divide by zero.")
+elif choice == "5":
+    print("Square Root:", math.sqrt(num1))
+elif choice == "6":
+    print("Mean:", statistics.mean([num1, num2]))
+else:
+    print("Invalid choice.")
